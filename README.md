@@ -1,11 +1,19 @@
-<p align="center">
-  <img src="assets/hero.png" alt="pulido — local, private, bilingual dictation polish" width="820">
-</p>
+<div align="center">
 
-<p align="center">
-  <b>Raw dictation in, clean text out. 100% on your machine.</b><br>
-  <sub>Zero dependencies · loopback-only · MIT</sub>
-</p>
+<img src="assets/hero.png" alt="pulido — local, private, bilingual dictation polish" width="100%">
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-e6b45a.svg)](LICENSE)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-1fb6c9.svg)](pyproject.toml)
+[![Zero dependencies](https://img.shields.io/badge/dependencies-zero-2a9d9f)](pulido.py)
+[![100% local](https://img.shields.io/badge/100%25-local-e6b45a)](#privacy)
+[![Engine: Ollama](https://img.shields.io/badge/engine-Ollama-1fb6c9)](https://ollama.com)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/GerardoRdz96/pulido/pulls)
+
+**Raw dictation in, clean text out.** pulido polishes messy speech-to-text into<br>
+ready-to-paste text with a small **local** model, handles Spanish/English, and<br>
+**never lets your voice leave the machine.**
+
+</div>
 
 ---
 
