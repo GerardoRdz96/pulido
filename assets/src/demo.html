@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1280px; height: 720px; }
+  body {
+    font-family: "SF Pro Display", -apple-system, "Inter", system-ui, sans-serif;
+    background: radial-gradient(100% 80% at 50% -20%, rgba(230,180,90,0.06), transparent 60%), #0e1013;
+    color: #f4f1ea; padding: 56px 64px; position: relative;
+  }
+  h1 { font-size: 34px; font-weight: 620; letter-spacing: -.02em; }
+  h1 .m { color:#e6b45a; font-family:"SF Mono",ui-monospace,Menlo,monospace; font-size:28px; }
+  .sub { color:#8b8f98; font-size:18px; margin-top:10px; font-weight:440; }
+  .flow { display:flex; align-items:stretch; gap:20px; margin-top:40px; }
+  .step { flex:1; background:#16191e; border:1px solid #262b32; border-radius:16px; padding:24px 24px 26px; }
+  .step .n { font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:#6b7079; font-weight:700; }
+  .step .h { font-size:21px; font-weight:600; margin:12px 0 8px; }
+  .step .d { font-size:15.5px; color:#aeb2ba; line-height:1.5; }
+  .step .h .k { color:#e6b45a; }
+  .go { align-self:center; color:#3d424b; font-size:26px; }
+  .demo { margin-top:34px; background:#16191e; border:1px solid #262b32; border-radius:16px;
+    box-shadow:0 24px 60px rgba(0,0,0,.4); overflow:hidden; }
+  .bar { display:flex; align-items:center; gap:7px; padding:14px 18px; border-bottom:1px solid #23272e;}
+  .bar i{width:11px;height:11px;border-radius:50%;display:block}
+  .bar .r{background:#ef6a5f}.bar .y{background:#f4bd4f}.bar .g{background:#66c98a}
+  .bar .cmd{margin-left:14px;font-family:"SF Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#7b8089}
+  .bar .cmd b{color:#cfd3da;font-weight:500}
+  .grid{display:grid;grid-template-columns:1fr 1fr;font-family:"SF Mono",ui-monospace,Menlo,monospace}
+  .cell{padding:24px 26px}
+  .cell.raw{border-right:1px solid #23272e}
+  .lbl{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin-bottom:12px}
+  .raw .lbl{color:#7b8089}.out .lbl{color:#7fe0b0}
+  .line{font-size:16px;line-height:1.65}
+  .raw .line{color:#868b93}.raw .fil{color:#565a62}
+  .out .line{color:#eef0ec}.out .fix{color:#e6b45a}
+</style>
+</head>
+<body>
+  <h1>Dictate anywhere, then <span class="m">pulido -m prompt</span></h1>
+  <div class="sub">Your speech-to-text captures. pulido cleans it up with a local model. Nothing leaves your machine.</div>
+
+  <div class="flow">
+    <div class="step"><div class="n">1 · capture</div><div class="h">Speak into <span class="k">any</span> STT</div><div class="d">Handy, Wispr Flow, OS dictation, whisper. pulido does not record audio.</div></div>
+    <div class="go">→</div>
+    <div class="step"><div class="n">2 · polish</div><div class="h">Glossary + <span class="k">local</span> model</div><div class="d">Deterministic name fixes, then one Ollama call. Loopback only, enforced.</div></div>
+    <div class="go">→</div>
+    <div class="step"><div class="n">3 · paste</div><div class="h">Clean text, <span class="k">ready</span></div><div class="d">Lands on your clipboard in about a second. Paste and move on.</div></div>
+  </div>
+
+  <div class="demo">
+    <div class="bar"><i class="r"></i><i class="y"></i><i class="g"></i>
+      <span class="cmd">$ pbpaste | <b>pulido -m prompt</b></span></div>
+    <div class="grid">
+      <div class="cell raw"><div class="lbl">raw dictation</div>
+        <div class="line"><span class="fil">okay so um</span> i need you to add an endpoint <span class="fil">este</span> al server que regrese el health de los agentes <span class="fil">you know</span> como json <span class="fil">and</span> que no rompa el de metrics <span class="fil">que ya existe</span></div>
+      </div>
+      <div class="cell out"><div class="lbl">polished prompt</div>
+        <div class="line">Add an endpoint to the server que regrese el health de los agentes como JSON. No rompas el endpoint de metrics que ya existe.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

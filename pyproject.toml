@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pulido"
+version = "0.1.0"
+description = "Local, private, bilingual dictation polish — clipboard in, clean text out, 100% on your machine."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Luis Gerardo Rodriguez Garcia" }]
+keywords = ["dictation", "speech-to-text", "ollama", "local-llm", "privacy", "bilingual", "cli", "whisper"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/GerardoRdz96/pulido"
+Issues = "https://github.com/GerardoRdz96/pulido/issues"
+
+[project.scripts]
+pulido = "pulido:main"
+
+[tool.setuptools]
+py-modules = ["pulido"]

@@ -1,0 +1,6 @@
+{
+  "_comment": "Copy to ~/.config/pulido/glossary.json (or point PULIDO_GLOSSARY at it). These merge OVER the built-in defaults. Keys are matched case-insensitively on word boundaries. Add the names your speech-to-text keeps getting wrong: your company, your products, your teammates.",
+  "penguin ally": "Penguin Alley",
+  "acme co": "ACME Co.",
+  "my product name": "MyProductName"
+}
